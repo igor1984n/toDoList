@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> 
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+	<script src="js/jquery-3.4.0.min.js"></script> 
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class="central-container">
+		<div id="left-column">
+			<h1 class="col-name">Список дел</h1>
+			<button class="add-new-task-button"><span>Новое дело</span></button>
+			<button class="delete-all-tasks-button"><span>Очистить</span></button>
+
+			<div class="task-link">
+				<div class="task-name-container">
+					<h3 class="task-name">Купить продукты</h3>
+					<div class="buttons-cont">
+						<button class="delete-button"><img src="check.png"></button>
+						<button class="update-button"><img src="update.png"></button><br>
+					</div>
+				</div>
+				<p class="task-description">Хлеб 1шт, овощи: 	огурцы - 1кг, помидоры - 1 кг; фрукты: апельсины - 1 кг, бананы - 1 кг</p>
+			</div>
+			<div class="task-link">
+				<div class="task-name-container">
+					<h3 class="task-name">Сделать уборку</h3>
+					<div class="buttons-cont">
+						<button class="delete-button"><img src="check.png"></button>
+						<button class="update-button"><img src="update.png"></button><br>
+					</div>
+				</div>
+				<p class="task-description">Помыть пол, подмести, убрать одежду</p>
+			</div>
+			<div class="task-link">
+				<div class="task-name-container">
+					<h3 class="task-name">Сходить за водой</h3>
+					<div class="buttons-cont">
+						<button class="delete-button"><img src="check.png"></button>
+						<button class="update-button"><img src="update.png"></button><br>
+					</div>
+				</div>
+				<p class="task-description">Купить 20 литров</p>
+			</div>
+			<div class="task-link">
+				<div class="task-name-container">
+					<h3 class="task-name">Позвонить маме</h3>
+					<div class="buttons-cont">
+						<button class="delete-button"><img src="check.png"></button>
+						<button class="update-button"><img src="update.png"></button><br>
+					</div>
+				</div>
+				<p class="task-description">Пригласить в кино</p>
+			</div>
+		</div>
+		<div id="right-column">
+			<h1 class="col-name">Добавить новое дело</h1>
+			<form class="add-task-form" method="POST" name="add-task-form">
+				<h5 class="field-description" >*Название</h5>
+				<input type="text" size="50" required name="task-name" value=""><br>
+				
+				<h5 class="field-description">*Описание</h5>
+				<textarea class="description-text" required></textarea><br>
+				<div class="date-and-urgency-container">
+					<div class="datetime-box">
+						<h5 class="field-description">*Выполнить до: </h5>
+        				<input type="datetime-local" class="deadline" required name="deadline" value="">
+        			</div>
+        			<div class="urgency-box">
+        				<h5 class="field-description">*Срочность</h5>
+        				<select class="urgency" required name="urgency">
+	            				<option>Cрочно</option>
+	            				<option>Стандарт</option>
+	            				<option>Не важно</option>
+        				</select>
+        			</div>
+        		</div>
+				<button type="submit" class="save-button" type="submit" value="">Добавить дело</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
